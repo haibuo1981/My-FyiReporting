@@ -61,8 +61,18 @@ namespace fyiReporting.RDL
         }
 
         // Added to expose data to Excel2003 file generation
-        protected IStreamGen StreamGen { get => _sg; set => _sg = value; }
-
+        // protected IStreamGen StreamGen { get => _sg; set => _sg = value; }
+        protected IStreamGen StreamGen
+        {
+            get
+            {
+                return _sg;
+            }
+            set
+            {
+                _sg = value;
+            }
+        }
         public void Dispose() 
 		{
 			// These should already be cleaned up; but in case of an unexpected error 

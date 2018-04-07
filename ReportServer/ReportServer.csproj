@@ -19,6 +19,11 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -210,6 +215,7 @@
     <None Include="mozzila-pdf\viewer.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Content Include="test.aspx" />
     <Content Include="Viewer.aspx" />
     <Content Include="plus.gif" />
     <Content Include="Reports.aspx" />
@@ -357,6 +363,13 @@
       <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportSession.cs" />
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Viewer.aspx.cs">
       <DependentUpon>Viewer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
